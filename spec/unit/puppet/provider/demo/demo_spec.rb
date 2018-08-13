@@ -17,7 +17,7 @@ RSpec.describe Puppet::Provider::Demo::Demo do
   end
 
   after(:all) do
-    FileUtils.remove_dir(@resource_path)  
+    FileUtils.remove_dir(@resource_path)
   end
 
   before(:each) do
@@ -70,5 +70,4 @@ RSpec.describe Puppet::Provider::Demo::Demo do
       ]
     end
   end
-
 end
