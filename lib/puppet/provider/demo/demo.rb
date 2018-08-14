@@ -9,9 +9,9 @@ class Puppet::Provider::Demo::Demo < Puppet::ResourceApi::SimpleProvider
     path
   end
 
-  def get(_context)
+  def get(context)
     resources = []
-    _context.notice("Using '#{resource_path}' to get resources")
+    context.notice("Using '#{resource_path}' to get resources")
     Dir.glob("#{resource_path}/*.yml").each do |file|
       res = YAML.safe_load(File.read(file), [Symbol])
       resources << res

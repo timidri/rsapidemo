@@ -10,6 +10,7 @@ RSpec.describe Puppet::Provider::Demo::Demo do
   let(:context) { instance_double('Puppet::ResourceApi::BaseContext', 'context') }
   let(:typedef) { instance_double('Puppet::ResourceApi::TypeDefinition', 'typedef') }
 
+  # rubocop:disable RSpec/BeforeAfterAll
   before(:all) do
     type_name = described_class.name.split('::').last.downcase
     temp_dir = Dir.mktmpdir
@@ -17,10 +18,12 @@ RSpec.describe Puppet::Provider::Demo::Demo do
   end
 
   after(:all) do
+    # rubocop:disable RSpec/InstanceVariable
     FileUtils.remove_dir(@resource_path)
   end
 
   before(:each) do
+    # rubocop:disable RSpec/SubjectStub
     allow(provider).to receive(:resource_path).and_return(@resource_path)
     allow(context).to receive(:notice)
     # byebug
