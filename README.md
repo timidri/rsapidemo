@@ -34,6 +34,7 @@ mkdir modules
 cd modules
 git clone https://github.com/timidri/rsapidemo
 cd rsapidemo
+pdk update
 pdk test unit # installs missing Gemfile dependencies
 ```
 
