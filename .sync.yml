@@ -3,7 +3,7 @@ Gemfile:
   optional:
     ':development':
       - gem: 'puppet-resource_api'
-      - gem: 'byebug'
+#      - gem: 'byebug'
 
 spec/spec_helper.rb:
   mock_with: ':rspec'
