@@ -34,6 +34,7 @@ mkdir modules
 cd modules
 git clone https://github.com/timidri/rsapidemo
 cd rsapidemo
+pdk test unit # installs missing Gemfile dependencies
 ```
 
 ## Usage
@@ -55,4 +56,4 @@ Examples of commands:
 
 ## Limitations
 
-This sample type and provider are only tested on Mac OS.
+This sample type and provider are only tested on Mac OS, CentOS 7, Windows 2012 R2, Windows 2016 and Windows 10.
